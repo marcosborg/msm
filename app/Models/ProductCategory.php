@@ -56,4 +56,5 @@ class ProductCategory extends Model implements HasMedia
 
         return $file;
     }
+
 }
