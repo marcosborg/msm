@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MSM - Home decoration</title>
+    <title>MSM</title>
     <meta name="description" content="A Manuel da Silva Marques, Comércio Internacional, Lda. Dedica-se à comercialização de artigos para decoração e objectos utilitários." />
 
     <!-- Bootstrap CSS -->
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="website/css/jquery.mCustomScrollbar.css" />
 
     <!-- Main Style -->
-    <link rel="stylesheet" href="website/style.css">
+    <link rel="stylesheet" href="website/style.css?v=0.1">
 
     <!-- Favicons
 		  ================================================== -->
@@ -98,26 +98,24 @@
             @endif
             @if ($header_links)
             <section class="bg-grey padding padding-bot-90">
-                <div class="container relative">
-                    <div class="row">
-                        <div class="services-h4 ">
-                            @foreach ($header_links as $header_link)
-                            <div class="col-sm-4 col-md-4 ">
-                                <div class="block-img-full services-fix">
-                                    <a class="img-block" href="{{ $header_link->link }}"><img src="{{ $header_link->image->getUrl() ?? 'http://placehold.it/810x451/ccc.jpg' }}" class="img-responsive" alt="Image"></a>
-                                    <div class="text-box">
-                                        <a href="{{ $header_link->link }}">
-                                            <h4 class="text-cap">{{ $header_link->title }}</h4>
-                                        </a>
-                                        <p>
-                                            {{ $header_link->text }}
-                                        </p>
-                                        <a class="text-cap view-more" href="{{ $header_link->link }}">{{ $header_link->button }}</a>
-                                    </div>
+                <div class="container">
+                    <div class="row" style="display: flex; justify-content: space-between;">
+                        @foreach ($header_links as $key => $header_link)
+                        <div class="col-sm-4 col-md-4 col">
+                            <div class="block-img-full services-fix">
+                                <a class="img-block" href="{{ $header_link->link }}"><img src="{{ $header_link->image->getUrl() ?? 'http://placehold.it/810x451/ccc.jpg' }}" class="img-responsive" alt="Image"></a>
+                                <div class="text-box">
+                                    <a href="{{ $header_link->link }}">
+                                        <h4 class="text-cap">{{ $header_link->title }}</h4>
+                                    </a>
+                                    <p>
+                                        {{ $header_link->text }}
+                                    </p>
+                                    <a class="text-cap view-more" href="{{ $header_link->link }}">{{ $header_link->button }}</a>
                                 </div>
                             </div>
-                            @endforeach
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </section>
@@ -127,7 +125,7 @@
             @foreach ($abouts as $about)
             <section class="padding padding-bot-90">
                 <div class="container">
-                    <div class="row">
+                    <div class="row text-center">
                         <div class="title-block">
                             <h2 class="title text-cap">{{ $about->title }}</h2>
                             <div class="divider divider-1">
@@ -138,9 +136,7 @@
                         </div>
                         <!-- End Title -->
                         <div class="clearfix mgb30"></div>
-                        <p class="text-center">
-                            {!! $about->text !!}
-                        </p>
+                        {!! $about->text !!}
                     </div>
                 </div>
             </section>
@@ -179,6 +175,15 @@
             <section class="padding bg-grey">
                 <div class="container">
                     <div class="row">
+                        <div class="title-block">
+                            <h2 class="title text-cap">As nossas marcas</h2>
+                            <div class="divider divider-1">
+                                <svg class="svg-triangle-icon-container">
+                                    <polygon class="svg-triangle-icon" points="6 11,12 0,0 0"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- End Title -->
                         <div class="owl-partner-warp">
                             <div class="customNavigation">
                                 <a class="btn prev-partners"><i class="fa fa-angle-left"></i></a>
@@ -210,7 +215,7 @@
                             @if ($abouts)
                             @foreach ($abouts as $about)
                             <p>
-                                {!! $about->text !!}
+                                {{ $common_information->footer_info }}
                             </p>
                             @endforeach
                             @endif
@@ -232,9 +237,9 @@
                                 Contact
                             </h4>
                             <ul class="list-link-footer">
-                                <li><i class="fa fa-home" aria-hidden="true"></i> Business Park Tejo XXI, Nave 1A Avenida Monte dos Castelinhos N.2 2600-659 Castanheira do Ribatejo - Portugal</li>
-                                <li><i class="fa fa-phone" aria-hidden="true"></i> +351 263 860 370</li>
-                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> carlatome@msm.pt</li>
+                                <li><i class="fa fa-home" aria-hidden="true"></i> {{ $common_information->address }}</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i> {{ $common_information->phone }}</li>
+                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> {{ $common_information->email }}</li>
                             </ul>
                         </div>
                     </div>

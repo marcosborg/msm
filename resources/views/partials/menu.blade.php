@@ -117,6 +117,16 @@
                 </a>
             </li>
         @endcan
+        @can('common_information_edit')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.common-informations.edit", [1]) }}" class="c-sidebar-nav-link {{ request()->is("admin/common-informations") || request()->is("admin/common-informations/*") ? "c-active" : "" }}">
+                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.commonInformation.title') }}
+                </a>
+            </li>
+        @endcan
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
             @can('profile_password_edit')
                 <li class="c-sidebar-nav-item">

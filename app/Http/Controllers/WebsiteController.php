@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\CommonInformation;
 use App\Models\HeaderLink;
 use App\Models\Link;
 use App\Models\Menu;
@@ -21,6 +22,7 @@ class WebsiteController extends Controller
         $abouts = About::all();
         $links = Link::all();
         $partners = Partner::all();
+        $common_information = CommonInformation::find(1);
 
         return view('website.index', compact([
             'menus',
@@ -28,7 +30,8 @@ class WebsiteController extends Controller
             'header_links',
             'abouts',
             'links',
-            'partners'
+            'partners',
+            'common_information'
         ]));
     }
 }

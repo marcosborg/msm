@@ -59,6 +59,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Menu
     Route::delete('menus/destroy', 'MenuController@massDestroy')->name('menus.massDestroy');
     Route::resource('menus', 'MenuController');
+
+    // Common Information
+    Route::delete('common-informations/destroy', 'CommonInformationController@massDestroy')->name('common-informations.massDestroy');
+    Route::resource('common-informations', 'CommonInformationController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password

@@ -191,5 +191,27 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
+    'commonInformation' => [
+        'title'          => 'Common Information',
+        'title_singular' => 'Common Information',
+        'fields'         => [
+            'id'                 => 'ID',
+            'id_helper'          => ' ',
+            'footer_info'        => 'Footer Info',
+            'footer_info_helper' => ' ',
+            'address'            => 'Address',
+            'address_helper'     => ' ',
+            'email'              => 'Email',
+            'email_helper'       => ' ',
+            'phone'              => 'Phone',
+            'phone_helper'       => ' ',
+            'created_at'         => 'Created at',
+            'created_at_helper'  => ' ',
+            'updated_at'         => 'Updated at',
+            'updated_at_helper'  => ' ',
+            'deleted_at'         => 'Deleted at',
+            'deleted_at_helper'  => ' ',
+        ],
+    ],
 
 ];

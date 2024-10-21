@@ -6498,11 +6498,6 @@ ol.children {
 /* Owl partner */
 .owl-partners img {
   margin: 0 auto;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  opacity: .5;
-  -webkit-transition: all 0.6s ease 0s;
-          transition: all 0.6s ease 0s;
 }
 .owl-partners img:hover {
   -webkit-filter: grayscale(0);
