@@ -205,7 +205,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <a href="/">
-                                <img src="/website/images/logo.png" width="200" alt="Image">
+                                <img src="website/images/logo.png" width="200" alt="Image">
                             </a>
                             @if ($abouts)
                             @foreach ($abouts as $about)
