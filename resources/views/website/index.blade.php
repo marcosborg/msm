@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="website/css/jquery.mCustomScrollbar.css" />
 
     <!-- Main Style -->
-    <link rel="stylesheet" href="website/style.css?v=0.1">
+    <link rel="stylesheet" href="website/style.css?v=0.2">
 
     <!-- Favicons
 		  ================================================== -->
@@ -64,7 +64,7 @@
                 </div>
             </header>
             <!-- End  Header -->
-            @if ($sliders)
+            @if ($sliders->count() > 0)
             <section>
                 <div class="rev_slider_wrapper">
                     <!-- START REVOLUTION SLIDER 5.0 auto mode -->
@@ -102,7 +102,7 @@
                     <div class="row" style="display: flex; justify-content: space-between;">
                         @foreach ($header_links as $key => $header_link)
                         <div class="col-sm-4 col-md-4 col">
-                            <div class="block-img-full services-fix">
+                            <div class="block-img-full {{ $sliders->count() > 0 ? 'services-fix' : 'services-fix2' }}">
                                 <a class="img-block" href="{{ $header_link->link }}"><img src="{{ $header_link->image->getUrl() ?? 'http://placehold.it/810x451/ccc.jpg' }}" class="img-responsive" alt="Image"></a>
                                 <div class="text-box">
                                     <a href="{{ $header_link->link }}">
