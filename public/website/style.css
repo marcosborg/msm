@@ -4730,7 +4730,7 @@ body {
   overflow: hidden;
 }
 .padding {
-  padding: 94px 0 120px 0;
+  padding: 0px 0 120px 0;
 }
 .padding-bottom-0 {
   padding-bottom: 0!important;
@@ -9797,7 +9797,7 @@ ul.list-link-footer li:hover:before {
     width: 90%;
   }
   .padding {
-    padding: 35px 0 35px 0;
+    padding: 0px 0 35px 0;
   }
   .wow {
     -webkit-animation-name: none !important;
@@ -9828,7 +9828,7 @@ ul.list-link-footer li:hover:before {
     padding-top: 10px;
   }
   header .left-header .navi-level-1 li a.logo img {
-    width: 100px;
+    width: 150px;
   }
   .navi-level-1.dot-seperator > li > a:after,
   .navi-level-1.line-separator > li > a:after,

@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="website/css/jquery.mCustomScrollbar.css" />
 
     <!-- Main Style -->
-    <link rel="stylesheet" href="website/style.css?v=0.2">
+    <link rel="stylesheet" href="website/style.css?v=0.5">
 
     <!-- Favicons
 		  ================================================== -->
@@ -99,7 +99,7 @@
             @if ($header_links)
             <section class="bg-grey padding padding-bot-90">
                 <div class="container">
-                    <div class="row" style="display: flex; justify-content: space-between;">
+                    <div class="row">
                         @foreach ($header_links as $key => $header_link)
                         <div class="col-sm-12 col-md-6 col">
                             <div class="block-img-full {{ $sliders->count() > 0 ? 'services-fix' : 'services-fix2' }}">
