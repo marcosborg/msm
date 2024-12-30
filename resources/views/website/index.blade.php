@@ -60,6 +60,42 @@
                             @endforeach
                         </ul>
                     </nav><!-- End Nav -->
+                    <nav class="mobile-nav">
+                        <ul class="mobile-navi">
+                            @foreach ($menus as $menu)
+                            <li>
+                                <a href="{{ $menu->link }}"><span>{{ $menu->name }}</span></a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </nav>
+                    <style>
+                        .mobile-nav {
+                            display: none;
+                        }
+
+                        .mobile-navi>li>a {
+                            padding: 0px !important;
+                            font-size: 12px;
+                            color: #888888;
+                        }
+
+                        @media only screen and (max-width: 767px) {
+                            .mobile-nav {
+                                display: block;
+                            }
+
+                            .main-navi {
+                                display: none;
+                            }
+                        }
+
+                        @media only screen and (min-width: 991px) {
+                            .mobile-nav {
+                                display: none !important;
+                            }
+                        }
+                    </style>
                     @endif
                 </div>
             </header>
@@ -307,14 +343,13 @@
             "use strict";
             Royal_Preloader.config({
                 mode: 'logo', // 'number', "text" or "logo"
-                logo: 'website/images/logo.png'
-                , timeout: 1
-                , showInfo: false
-                , opacity: 1
-                , background: ['#FFFFFF']
+                logo: 'website/images/logo.png',
+                timeout: 1,
+                showInfo: false,
+                opacity: 1,
+                background: ['#FFFFFF']
             });
         })(jQuery);
-
     </script>
 
     <!-- Global Js
