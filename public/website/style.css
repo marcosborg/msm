@@ -3695,7 +3695,6 @@ header ul {
 }
 header .left-header .navi-level-1 li a.logo {
   padding: 0;
-  padding-top: 15px;
 }
 .navi-level-1 > li {
   position: relative;
@@ -3849,7 +3848,6 @@ span.mini-cart-counter {
 }
 .header-v2 .left-header .navi-level-1 li a.logo {
   padding-left: 15px;
-  padding-right: 15px;
 }
 .header-v2 nav {
   float: right;
@@ -9723,7 +9721,7 @@ ul.list-link-footer li:hover:before {
     width: calc(100% - 160px);
   }
   .header-v2 .left-header {
-    width: 160px;
+    width: 200px;
   }
   .header-v2 nav {
     width: -webkit-calc(100% - 360px);
