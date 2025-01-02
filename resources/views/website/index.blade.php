@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="website/css/jquery.mCustomScrollbar.css" />
 
     <!-- Main Style -->
-    <link rel="stylesheet" href="website/style.css?v=0.7">
+    <link rel="stylesheet" href="website/style.css?v=0.8">
 
     <!-- Favicons
 		  ================================================== -->
@@ -45,7 +45,7 @@
                     <div class="left-header">
                         <ul class="navi-level-1">
                             <li>
-                                <a href="{{ env('APP_URL') }}" class="logo"><img src="website/images/logo2.png" class="img-responsive" alt="Image">
+                                <a href="{{ env('APP_URL') }}" class="logo"><img src="website/images/logo3.png" class="img-responsive" alt="Image">
                                 </a>
                             </li>
                         </ul>
