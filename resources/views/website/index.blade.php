@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="website/css/jquery.mCustomScrollbar.css" />
 
     <!-- Main Style -->
-    <link rel="stylesheet" href="website/style.css?v=0.8">
+    <link rel="stylesheet" href="website/style.css?v=0.10">
 
     <!-- Favicons
 		  ================================================== -->
